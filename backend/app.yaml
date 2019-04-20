@@ -1,0 +1,13 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+service: backend
+
+handlers:
+- url: /.*
+  script: main.app
+
+env_variables:
+  # Replace with your Firebase project ID.
+  FIREBASE_PROJECT_ID: 'cuez-fb8d0'
+  GAE_USE_SOCKETS_HTTPLIB : 'true'

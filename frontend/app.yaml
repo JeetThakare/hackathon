@@ -1,0 +1,35 @@
+runtime: python27
+api_version: 1
+service: default
+threadsafe: true
+
+handlers:
+
+# root
+# - url: /
+#   static_files: dist/my-app/index.html
+#   upload: dist/my-app/index.html
+
+# - url: /(.*\.(gif|png|jpeg|jpg|css|js|ico))$
+#   static_files: dist/my-app/\1
+#   upload: dist/my-app/(.+)
+
+
+# handlers:
+
+# - url: /(.*)
+#   static_files: dist/my-app/index.html
+#   upload: dist/my-app/index.html
+
+# - url: /(.+)
+#   static_files: dist/my-app/\1
+#   upload: dist/my-app/(.*)
+
+
+- url: /(.*\.(gif|png|jpg|css|js)(|\.map))$
+  static_files: dist/my-app/\1
+  upload: dist/my-app/(.*)(|\.map)
+
+- url: /(.*)
+  static_files: dist/my-app/index.html
+  upload: ddist/my-appist/index.html
